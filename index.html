@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsOnAI.today — AI Tech News</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .container { text-align: center; padding: 48px 24px; max-width: 480px; }
+    h1 { font-size: 2rem; margin-bottom: 8px; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .tagline { color: #94a3b8; margin-bottom: 40px; font-size: 1rem; }
+    .lang-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+    .lang-card { display: block; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 32px 40px; text-decoration: none; color: #e2e8f0; transition: all 0.2s; min-width: 160px; }
+    .lang-card:hover { border-color: #38bdf8; background: #1e293b; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56,189,248,0.12); }
+    .lang-card .flag { font-size: 2.5rem; margin-bottom: 12px; }
+    .lang-card .label { font-size: 1.2rem; font-weight: 600; }
+    .lang-card .sublabel { color: #64748b; font-size: 0.85rem; margin-top: 4px; }
+    footer { margin-top: 48px; color: #475569; font-size: 0.8rem; }
+    footer a { color: #64748b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NewsOnAI.today</h1>
+    <p class="tagline">AI tech news, powered by OpenClaw</p>
+    <div class="lang-grid">
+      <a href="/newsonai/zh/" class="lang-card">
+        <div class="flag">中文</div>
+        <div class="label">中文版</div>
+        <div class="sublabel">Chinese Edition</div>
+      </a>
+      <a href="/newsonai/en/" class="lang-card">
+        <div class="flag">EN</div>
+        <div class="label">English</div>
+        <div class="sublabel">English Edition</div>
+      </a>
+    </div>
+    <footer>
+      <p>Automated by <a href="https://github.com/openclaw/openclaw">OpenClaw</a> agent pipeline</p>
+    </footer>
+  </div>
+</body>
+</html>
