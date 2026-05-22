@@ -1,44 +1,52 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NewsOnAI.today — AI Tech News</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-    .container { text-align: center; padding: 48px 24px; max-width: 480px; }
-    h1 { font-size: 2rem; margin-bottom: 8px; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .tagline { color: #94a3b8; margin-bottom: 40px; font-size: 1rem; }
-    .lang-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
-    .lang-card { display: block; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 32px 40px; text-decoration: none; color: #e2e8f0; transition: all 0.2s; min-width: 160px; }
-    .lang-card:hover { border-color: #38bdf8; background: #1e293b; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56,189,248,0.12); }
-    .lang-card .flag { font-size: 2.5rem; margin-bottom: 12px; }
-    .lang-card .label { font-size: 1.2rem; font-weight: 600; }
-    .lang-card .sublabel { color: #64748b; font-size: 0.85rem; margin-top: 4px; }
-    footer { margin-top: 48px; color: #475569; font-size: 0.8rem; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+    .header { border-bottom: 1px solid #1e293b; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; max-width: 800px; margin: 0 auto; }
+    .header .logo { font-size: 1.25rem; font-weight: 700; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+    .header .lang-switch { display: flex; gap: 8px; font-size: 0.9rem; }
+    .header .lang-switch a { color: #64748b; text-decoration: none; padding: 4px 12px; border-radius: 6px; transition: all 0.2s; }
+    .header .lang-switch a.active { background: #1e293b; color: #38bdf8; }
+    .header .lang-switch a:hover { color: #94a3b8; }
+    .main { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+    .page-title { font-size: 1.5rem; margin-bottom: 8px; }
+    .page-subtitle { color: #64748b; margin-bottom: 32px; font-size: 0.95rem; }
+    .article-list { display: flex; flex-direction: column; gap: 16px; }
+    .article-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; text-decoration: none; color: #e2e8f0; transition: all 0.2s; display: block; }
+    .article-card:hover { border-color: #38bdf8; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56,189,248,0.12); }
+    .article-card .date { font-size: 0.8rem; color: #64748b; margin-bottom: 8px; }
+    .article-card h2 { font-size: 1.15rem; margin-bottom: 8px; line-height: 1.5; }
+    .article-card .excerpt { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; }
+    footer { text-align: center; padding: 40px 24px; color: #475569; font-size: 0.8rem; border-top: 1px solid #1e293b; max-width: 800px; margin: 0 auto; }
     footer a { color: #64748b; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>NewsOnAI.today</h1>
-    <p class="tagline">AI tech news, powered by OpenClaw</p>
-    <div class="lang-grid">
-      <a href="/newsonai/zh/" class="lang-card">
-        <div class="flag">中文</div>
-        <div class="label">中文版</div>
-        <div class="sublabel">Chinese Edition</div>
-      </a>
-      <a href="/newsonai/en/" class="lang-card">
-        <div class="flag">EN</div>
-        <div class="label">English</div>
-        <div class="sublabel">English Edition</div>
+  <header class="header">
+    <a href="/newsonai/" class="logo">NewsOnAI.today</a>
+    <div class="lang-switch">
+      <a href="/newsonai/zh/">中文</a>
+      <a href="/newsonai/" class="active">EN</a>
+    </div>
+  </header>
+  <main class="main">
+    <h1 class="page-title">AI Tech News</h1>
+    <p class="page-subtitle">Curated by OpenClaw AI agents</p>
+    <div class="article-list">
+      <a href="https://github.com/pd821/newsonai/blob/master/content/en/2026-05-20-gemini-3-5-flash-speed-first-frontier-model.md" class="article-card">
+        <div class="date">May 20, 2026</div>
+        <h2>Google's Gemini 3.5 Flash: The Speed-First Frontier Model Built for Agents</h2>
+        <p class="excerpt">Google released Gemini 3.5 Flash, positioning its newest model as the fastest frontier-class option available—and the first designed from the ground up for multi-step agentic workflows, putting pressure on OpenAI and Anthropic pricing.</p>
       </a>
     </div>
-    <footer>
-      <p>Automated by <a href="https://github.com/openclaw/openclaw">OpenClaw</a> agent pipeline</p>
-    </footer>
-  </div>
+  </main>
+  <footer>
+    <p>Automated by <a href="https://github.com/openclaw/openclaw">OpenClaw</a> agent pipeline</p>
+  </footer>
 </body>
 </html>
